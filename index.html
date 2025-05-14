@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover must-try local dishes with our AI-powered food guide. Get personalized recommendations for authentic cuisine worldwide.">
+    <title>AI Local Food Guide | Discover Authentic Local Cuisine</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <i class="fas fa-utensils"></i>
+                <span>AI Food Guide</span>
+            </a>
+            
+            <div class="nav-links" id="navLinks">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#dishes" class="nav-link">Popular Dishes</a>
+                <a href="#why-us" class="nav-link">Why Us</a>
+                <a href="#api" class="nav-link">API</a>
+            </div>
+            
+            <div class="nav-actions">
+                <div class="theme-toggle-container">
+                    <span class="theme-toggle-label">Dark</span>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="darkModeToggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <button class="btn btn-outline" id="openLogin">
+                    <i class="fas fa-sign-in-alt btn-icon"></i> Login
+                </button>
+                <button class="btn btn-primary" id="openSignup">
+                    <i class="fas fa-user-plus btn-icon"></i> Sign Up
+                </button>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1 class="hero-title">Discover Authentic Local Cuisine</h1>
+            <p class="hero-subtitle">Our AI-powered food guide helps you find must-try dishes from around the world, tailored to your personal taste preferences</p>
+            <div class="hero-actions">
+                <a href="#chatbot" class="btn btn-primary">
+                    <i class="fas fa-robot btn-icon"></i> Try Our AI
+                </a>
+                <a href="#signup" class="btn btn-outline">
+                    <i class="fas fa-utensils btn-icon"></i> Get Started
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section" id="features">
+        <div class="container">
+            <h2 class="section-title">Powerful Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="feature-title">AI-Powered Recommendations</h3>
+                    <p>Our advanced machine learning algorithms analyze thousands of local reviews to suggest the best dishes based on your preferences and dietary needs.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <h3 class="feature-title">Global Coverage</h3>
+                    <p>From street food in Bangkok to fine dining in Paris, we've got authentic local cuisine from every corner of the world in our extensive database.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="feature-title">Personalized For You</h3>
+                    <p>Tell us your dietary restrictions, flavor preferences, and budget, and we'll tailor recommendations specifically for your unique tastes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="section why-us" id="why-us">
+        <div class="container">
+            <h2 class="section-title">Why Choose AI Food Guide?</h2>
+            <p class="text-center" style="max-width: 800px; margin: 0 auto 3.5rem; font-size: 1.1rem;">We're revolutionizing the way food enthusiasts discover authentic local cuisine with cutting-edge technology and unparalleled local knowledge.</p>
+            
+            <div class="reasons-grid">
+                <div class="reason-card">
+                    <div class="reason-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="reason-content">
+                        <h3>Advanced AI Technology</h3>
+                        <p>Our <span class="code-effect">neural network</span> analyzes thousands of local reviews, food blogs, and cultural insights to find hidden culinary gems you won't find in tourist guides or mainstream apps.</p>
+                    </div>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <div class="reason-content">
+                        <h3>Hyper-Local Knowledge</h3>
+                        <p>Get recommendations for specific neighborhoods, not just cities. Our <span class="code-effect">geolocation API</span> pinpoints the best authentic spots within walking distance of your location.</p>
+                    </div>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="reason-content">
+                        <h3>Personalized For You</h3>
+                        <p>Our <span class="code-effect">recommendation engine</span> learns your taste preferences, dietary restrictions, and budget to suggest dishes you'll love, with accuracy that improves over time.</p>
+                    </div>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="reason-content">
+                        <h3>Global Coverage</h3>
+                        <p>With over <span class="code-effect">100,000+</span> dishes in our constantly updated database, we cover everything from street food stalls to Michelin-starred restaurants worldwide.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Dishes Section -->
+    <section class="section" id="dishes">
+        <div class="container">
+            <h2 class="section-title">Popular Local Dishes</h2>
+            <p class="text-center" style="max-width: 700px; margin: 0 auto 3.5rem; font-size: 1.1rem;">Explore some of the most beloved local dishes from around the world that our users rave about.</p>
+            
+            <div class="food-gallery">
+                <div class="food-card">
+                    <div class="food-img-container">
+                        <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Pizza" class="food-img">
+                    </div>
+                    <div class="food-info">
+                        <span class="food-origin">Naples, Italy</span>
+                        <h3 class="food-name">Neapolitan Pizza</h3>
+                        <p>Authentic wood-fired pizza with San Marzano tomatoes, fresh mozzarella di bufala, basil, and extra virgin olive oil, cooked in 90 seconds at 900°F.</p>
+                    </div>
+                </div>
+                <div class="food-card">
+                    <div class="food-img-container">
+                        <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Tacos" class="food-img">
+                    </div>
+                    <div class="food-info">
+                        <span class="food-origin">Mexico City, Mexico</span>
+                        <h3 class="food-name">Al Pastor Tacos</h3>
+                        <p>Marinated pork cooked on a vertical spit with pineapple, served on corn tortillas with cilantro, onions, and a squeeze of lime. A perfect blend of Lebanese and Mexican culinary traditions.</p>
+                    </div>
+                </div>
+                <div class="food-card">
+                    <div class="food-img-container">
+                        <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Sushi" class="food-img">
+                    </div>
+                    <div class="food-info">
+                        <span class="food-origin">Tokyo, Japan</span>
+                        <h3 class="food-name">Omakase Sushi</h3>
+                        <p>Chef's selection of the freshest seasonal fish, prepared with precision and artistry. The ultimate sushi experience where you trust the chef's expertise completely.</p>
+                    </div>
+                </div>
+                <div class="food-card">
+                    <div class="food-img-container">
+                        <img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Pho" class="food-img">
+                    </div>
+                    <div class="food-info">
+                        <span class="food-origin">Hanoi, Vietnam</span>
+                        <h3 class="food-name">Pho Bo</h3>
+                        <p>Aromatic beef noodle soup with rich 12-hour simmered bone broth, rice noodles, thinly sliced beef, and a bouquet of fresh herbs like Thai basil, cilantro, and sawtooth herb.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- API Section -->
+    <section class="section" id="api">
+        <div class="container">
+            <div class="api-section">
+                <h2 class="section-title">API Integration</h2>
+                <p style="max-width: 700px; margin: 0 auto 2.5rem; font-size: 1.1rem;">Integrate our powerful AI food recommendation engine into your own applications with our developer-friendly API.</p>
+                
+                <div class="api-form">
+                    <div class="form-group">
+                        <label for="apiKeyInput" class="form-label">Your Gemini API Key</label>
+                        <input type="text" id="apiKeyInput" class="form-input" placeholder="Enter your Gemini API key here..." required>
+                    </div>
+                    <button class="btn btn-primary" id="saveApiKey">
+                        <i class="fas fa-save btn-icon"></i> Save Key
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="section" id="signup">
+        <div class="container">
+            <div class="footer-cta">
+                <h2 class="cta-title">Ready to Discover Amazing Local Foods?</h2>
+                <p class="cta-subtitle">Join our community of food explorers and get personalized recommendations based on your taste preferences.</p>
+                
+                <form id="footerSignupForm" class="signup-form">
+                    <div class="form-group">
+                        <input type="email" id="footerEmail" class="form-input" placeholder="Your email address" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="footerPassword" class="form-input" placeholder="Create a password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-user-plus btn-icon"></i> Sign Up Free
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <i class="fas fa-utensils"></i>
+                        <span>AI Food Guide</span>
+                    </div>
+                    <p>Discover authentic local cuisine with our AI-powered food recommendation engine. We help you find the best dishes wherever you are in the world.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Press</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">API Documentation</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><a href="mailto:hello@aifoodguide.com">hello@aifoodguide.com</a></li>
+                        <li><a href="tel:+11234567890">+1 (123) 456-7890</a></li>
+                        <li>123 Foodie Street</li>
+                        <li>San Francisco, CA 94107</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 AI Local Food Guide. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbot -->
+    <div class="chatbot-toggle" id="chatbotToggle">
+        <i class="fas fa-robot"></i>
+    </div>
+
+    <div class="chatbot-container" id="chatbot">
+        <div class="chatbot-header">
+            <div class="chatbot-title">
+                <i class="fas fa-robot"></i>
+                <span>Food Guide AI Assistant</span>
+            </div>
+            <button class="chatbot-close" id="closeChatbot" aria-label="Close chatbot">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="chatbot-body" id="chatbotBody">
+            <div class="chat-message bot-message">
+                Hello! I'm your AI Food Guide. Where are you or where are you planning to visit? I can recommend the best local dishes to try!
+            </div>
+        </div>
+        <div class="chatbot-input-container">
+            <form class="chatbot-form" id="chatbotForm">
+                <input type="text" class="chatbot-input" id="userInput" placeholder="Ask about local dishes..." required aria-label="Chat input">
+                <button type="submit" class="chatbot-submit" aria-label="Send message">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div class="modal" id="signupModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeSignupModal" aria-label="Close modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <h2 class="modal-title">Create Your Account</h2>
+            <form id="signupForm" class="auth-form">
+                <div class="form-group">
+                    <label for="signupName" class="form-label">Full Name</label>
+                    <input type="text" id="signupName" class="form-input" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail" class="form-label">Email</label>
+                    <input type="email" id="signupEmail" class="form-input" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword" class="form-label">Password</label>
+                    <input type="password" id="signupPassword" class="form-input" placeholder="Create password (min 8 chars)" required minlength="8">
+                </div>
+                <div class="form-group">
+                    <label for="signupConfirm" class="form-label">Confirm Password</label>
+                    <input type="password" id="signupConfirm" class="form-input" placeholder="Confirm password" required>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-user-plus btn-icon"></i> Sign Up
+                    </button>
+                </div>
+                <div class="form-footer">
+                    Already have an account? <a id="switchToLogin">Login</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeLoginModal" aria-label="Close modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <h2 class="modal-title">Welcome Back</h2>
+            <form id="loginForm" class="auth-form">
+                <div class="form-group">
+                    <label for="loginEmail" class="form-label">Email</label>
+                    <input type="email" id="loginEmail" class="form-input" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword" class="form-label">Password</label>
+                    <input type="password" id="loginPassword" class="form-input" placeholder="Enter your password" required>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-sign-in-alt btn-icon"></i> Login
+                    </button>
+                </div>
+                <div class="form-footer">
+                    Don't have an account? <a id="switchToSignup">Sign Up</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
